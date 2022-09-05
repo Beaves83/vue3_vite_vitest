@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
@@ -14,11 +13,14 @@ import HelloWorld from "./components/HelloWorld.vue";
     />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/fetchData">Fetch data</RouterLink>
+        <RouterLink to="/dynamicList">Dynamic list</RouterLink>
+        <RouterLink to="/conditionalsandloops">Conditionals and loops</RouterLink>
+
+        
       </nav>
     </div>
   </header>
@@ -39,9 +41,10 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 25px;
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 nav a.router-link-exact-active {
