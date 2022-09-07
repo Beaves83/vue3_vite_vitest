@@ -19,8 +19,8 @@ import { RouterLink, RouterView } from "vue-router";
         <RouterLink to="/fetchData">Fetch data</RouterLink>
         <RouterLink to="/dynamicList">Dynamic list</RouterLink>
         <RouterLink to="/conditionalsandloops">Conditionals and loops</RouterLink>
-
-        
+        <RouterLink to="/dynamicclasses">Dynamic classes</RouterLink>
+        <RouterLink to="/conditionalrendering">Conditional rendering</RouterLink>
       </nav>
     </div>
   </header>

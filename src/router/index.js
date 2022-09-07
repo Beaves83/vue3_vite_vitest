@@ -12,9 +12,6 @@ const router = createRouter({
     {
       path: "/fetchData",
       name: "fetchData",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import("../views/FetchDataView.vue"),
     },
     {
@@ -26,6 +23,16 @@ const router = createRouter({
       path: "/conditionalsandloops",
       name: "conditionalsandloops",
       component: () => import("../views/ConditionalsAndLoopsView.vue"),
+    },
+    {
+      path: "/dynamicclasses",
+      name: "dynamicclasses",
+      component: () => import("../views/DynamicClassesView.vue"),
+    },
+    {
+      path: "/conditionalrendering",
+      name: "conditionalrendering",
+      component: () => import("../views/ConditionalRenderingView.vue"),
     },
   ],
 });
