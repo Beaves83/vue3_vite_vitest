@@ -1,18 +1,17 @@
 <script setup>
-
 const props = defineProps({
-    msg: String
+  msg: {
+    type: String,
+    default: "",
+  },
 })
 
-const emit = defineEmits(
-    ['response']
-)
+const emit = defineEmits(["response"]);
 
-emit('response', 'hello from child')
-
+emit("response", "hello from child");
 </script>
 
 <template>
-    <h2>{{ msg || 'No props passed yet'}}</h2>
-    <slot>Fallback content</slot>
+  <h2>{{ msg || "No props passed yet" }}</h2>
+  <slot>Fallback content</slot>
 </template>

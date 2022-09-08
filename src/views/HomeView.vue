@@ -11,8 +11,7 @@ const childMsg = ref('No child msg yet')
   <main>
     <p class="first_child">
       <h3>Fisrt Child (without slot)</h3>
-      <ChildComp @response="(msg) => childMsg = msg" :msg="greeting" />
-
+      <ChildComp :msg="greeting" @response="(msg) => childMsg = msg" />
     </p>
     <p class="second_child">
       <h3>Second Child (with slot)</h3>
@@ -21,7 +20,7 @@ const childMsg = ref('No child msg yet')
       </ChildComp>
       
     </p>
-      <p>{{ childMsg }}</p>
+    <p>{{ childMsg }}</p>
   </main>
 </template>
 

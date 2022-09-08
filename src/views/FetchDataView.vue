@@ -1,35 +1,31 @@
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, watch } from "vue";
 
-const todoId = ref(1)
-const todoData = ref(null)
+const todoId = ref(1);
+const todoData = ref(null);
 
 watch(todoId, (newCount) => {
-  console.log(`new count is: ${newCount}`)
-})
+  console.log(`new count is: ${newCount}`);
+});
 
 async function fetchData() {
-  todoData.value = null
+  todoData.value = null;
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/todos/${todoId.value}`
-  )
+  );
   todoData.value = await res.json();
-} 
+}
 
-fetchData()
+fetchData();
 
-watch(todoId, fetchData)
-
+watch(todoId, fetchData);
 </script>
 
 <template>
-
   <p>Todo id: {{ todoId }}</p>
   <button @click="todoId++">Fetch next todo</button>
   <p v-if="!todoData">Loading...</p>
   <pre v-else>{{ todoData }}</pre>
 </template>
 
-<style>
-
-</style>
+<style></style>

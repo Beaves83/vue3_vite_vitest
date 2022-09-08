@@ -13,14 +13,17 @@ import { RouterLink, RouterView } from "vue-router";
     />
 
     <div class="wrapper">
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/fetchData">Fetch data</RouterLink>
         <RouterLink to="/dynamicList">Dynamic list</RouterLink>
-        <RouterLink to="/conditionalsandloops">Conditionals and loops</RouterLink>
-        <RouterLink to="/dynamicclasses">Dynamic classes</RouterLink>
-        <RouterLink to="/conditionalrendering">Conditional rendering</RouterLink>
+        <RouterLink to="/conditionalsAndLoops"
+          >Conditionals and loops</RouterLink
+        >
+        <RouterLink to="/dynamicClasses">Dynamic classes</RouterLink>
+        <RouterLink to="/conditionalRendering"
+          >Conditional rendering</RouterLink
+        >
       </nav>
     </div>
   </header>
