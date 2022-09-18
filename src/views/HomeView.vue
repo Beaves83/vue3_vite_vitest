@@ -1,34 +1,32 @@
 <script setup>
-  import { ref } from 'vue'
-  import ChildComp from "@/components/ChildComp.vue";
+import { ref } from "vue";
+import ChildComp from "@/components/ChildComp.vue";
 
-const greeting = ref('Hello from parent')
-const childMsg = ref('No child msg yet')
-
+const greeting = ref("Hello from parent");
+const childMsg = ref("No child msg yet");
 </script>
 
 <template>
   <main>
-    <p class="first_child">
-      <h3>Fisrt Child (without slot)</h3>
-      <ChildComp :msg="greeting" @response="(msg) => childMsg = msg" />
-    </p>
-    <p class="second_child">
+    <div class="first_child">
+      <h3>First Child (without slot)</h3>
+      <ChildComp :msg="greeting" @response="(msg) => (childMsg = msg)" />
+    </div>
+    <div class="second_child">
       <h3>Second Child (with slot)</h3>
       <ChildComp>
-        Passing a slot with information --> {{greeting}}
+        Passing a slot with information --> {{ greeting }}
       </ChildComp>
-      
-    </p>
+    </div>
     <p>{{ childMsg }}</p>
   </main>
 </template>
 
 <style>
- .first_child {
+.first_child {
   background-color: rgb(220, 221, 166);
- }
- .second_child {
+}
+.second_child {
   background-color: rgb(167, 204, 149);
- }
+}
 </style>

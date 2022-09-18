@@ -20,8 +20,8 @@ const router = createRouter({
       component: () => import("../views/DynamicListView.vue"),
     },
     {
-      path: "/conditionalAndLoops",
-      name: "conditionalAndLoops",
+      path: "/conditionalsAndLoops",
+      name: "conditionalsAndLoops",
       component: () => import("../views/ConditionalsAndLoopsView.vue"),
     },
     {
